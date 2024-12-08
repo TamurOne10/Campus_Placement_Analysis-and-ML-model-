@@ -1,4 +1,4 @@
-Recruitment Prediction App - README
+Recruitment Prediction App 
 Overview
 The Recruitment Prediction App is an interactive machine-learning application designed to predict whether a student is likely to be recruited based on their academic performance and personal details. It leverages a Random Forest Classifier trained on a real-world dataset to provide accurate predictions, helping recruiters, HR professionals, and students make informed decisions.
 
