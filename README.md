@@ -162,7 +162,7 @@ Random Forest is an ensemble learning method that builds multiple decision trees
 
 ### 💻 Implementation
 
-```python
+python
 from sklearn.ensemble import RandomForestClassifier
 
 rf_model = RandomForestClassifier(random_state=42)
