@@ -152,17 +152,33 @@ jupyter notebook Campus_Placement.ipynb
 > **Note:** Place the dataset file (`train.csv`) in the same directory as the notebook before running.
 
 
-> 🌲 Model Selection
-Algorithm: Random Forest Classifier
-A Random Forest is an ensemble learning method that builds multiple decision trees during training and merges their predictions through majority voting to produce a more accurate and stable result.
-pythonfrom sklearn.ensemble import RandomForestClassifier
+## 🌲 Model Selection
+
+### 🧠 Algorithm: Random Forest Classifier
+
+Random Forest is an ensemble learning method that builds multiple decision trees during training and combines their predictions using majority voting to produce a more accurate and stable result.
+
+---
+
+### 💻 Implementation
+
+```python
+from sklearn.ensemble import RandomForestClassifier
 
 rf_model = RandomForestClassifier(random_state=42)
 rf_model.fit(X_train, y_train)
-Why Random Forest?
-ReasonExplanation🎯 Binary ClassificationTarget variable (status) is Placed / Not Placed — a perfect fit for tree-based classifiers🔢 Mixed Data TypesDataset contains both numerical (SSC %, MBA %) and categorical (gender, work experience) features — Random Forest handles both without needing feature scaling📦 Small DatasetWith ~215 rows, overfitting is a real risk. Random Forest mitigates this through bagging (training each tree on a random data subset)🛡️ Robust to OutliersIQR analysis revealed outliers in HSC % (e.g., 97.7). Unlike distance-based models, Random Forest uses splits and is not skewed by outliers📊 Feature ImportanceProvides built-in feature_importances_ to identify which academic and demographic factors most influenced placement outcomes
+
 
 ---
+
+| Reason                   | Explanation                                                                                                                                                   |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🎯 Binary Classification | The target variable (`status`) is Placed / Not Placed, making it well-suited for tree-based classifiers                                                       |
+| 🔢 Mixed Data Types      | The dataset includes both numerical (SSC %, MBA %) and categorical (gender, work experience) features, which Random Forest can handle without feature scaling |
+| 📦 Small Dataset         | With ~215 records, overfitting is a concern. Random Forest reduces this risk using bagging (training trees on random subsets of data)                         |
+| 🛡️ Robust to Outliers   | Outliers identified via IQR (e.g., high HSC scores) do not significantly impact performance since the model relies on decision splits                         |
+| 📊 Feature Importance    | Provides built-in `feature_importances_` to identify the most influential factors affecting placement outcomes                                                |
+
 
 ## 📈 Results
 
