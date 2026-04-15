@@ -157,12 +157,36 @@ jupyter notebook Campus_Placement.ipynb
 
 The machine learning model was evaluated using standard classification metrics:
 
+### 🔢 Model Performance
+
 | Metric | Score |
 |---|---|
-| Accuracy | *(see notebook)* |
-| Precision | *(see notebook)* |
-| Recall | *(see notebook)* |
-| F1-Score | *(see notebook)* |
+| Accuracy | 92.86% |
+| Precision (Class 1 - Placed) | 94% |
+| Recall (Class 1 - Placed) | 97% |
+| F1-Score (Class 1 - Placed) | 96% |
+
+---
+
+### 📊 Classification Report
+
+| Class | Precision | Recall | F1-Score | Support |
+|---|---|---|---|---|
+| Not Placed (0) | 0.88 | 0.78 | 0.82 | 9 |
+| Placed (1) | 0.94 | 0.97 | 0.96 | 33 |
+
+---
+
+### 🧠 Key Observations
+
+- The model achieves a **high overall accuracy of 92.86%**, indicating strong predictive performance.
+- **Class 1 (Placed students)** is predicted with very high precision and recall, making the model reliable for identifying successful candidates.
+- **Class 0 (Not Placed)** has slightly lower recall (78%), suggesting some misclassification in predicting non-placed students.
+- The model performs better on the majority class, which is expected due to class imbalance.
+
+---
+
+> 📌 Full confusion matrix and detailed evaluation are available in the notebook.
 
 > Full results, confusion matrices, and visualizations are available inside the notebook.
 
